@@ -1,0 +1,25 @@
+{
+  "url": "/Users/gucheng/Documents/workspace/app/nodebb-plugin-announcement-board",
+  "library": "./plugin.js",
+  "staticDirs": {
+    "partials": "partials"
+  },
+  "scripts": [
+    "./partials/script.js"
+  ],
+  "hooks": [
+    {
+      "hook": "static:app.load",
+      "method": "init"
+    },
+    {
+      "hook": "filter:admin.header.build",
+      "method": "addAdminNavigation"
+    },
+    {
+      "hook": "filter:config.get",
+      "method": "appendConfig"
+    }
+  ],
+  "templates": "partials"
+}
